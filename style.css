@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+html{
+    height: 100%;
+    font-size: 16px;
+}
+
+body{
+    background-image: linear-gradient(to right, #ff416c, #ff4b2b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+
+#caculadora{
+    backdrop-filter: blur(11px);
+    background-color: rgba(240, 248, 255, 0.5);
+    max-height: 80%;
+    width: 600px;
+    aspect-ratio: 2/3;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.678);
+}
+
+#caculadora .tela{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    overflow: auto;
+    text-align: end;
+}
+
+#caculadora .btns{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: repeat(5,auto);
+}
+#caculadora .btns .btn{
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 3rem;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s background;
+}
+#caculadora .btns .btn:hover{
+    background-color: rgba(255, 255, 255);
+}
+
+#caculadora .btns .btn.red{
+    background-color: rgba(255, 66, 110, 0.5)
+}
+#caculadora .btns .btn.red:hover{
+    background-color: rgba(255, 66, 110)
+}
+
+#caculadora .btns .btn.double{
+    grid-column: span 2;
+}
+#caculadora .btns .btn.triple{
+    grid-column: span 3;
+}
